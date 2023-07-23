@@ -13,6 +13,9 @@ toggleterm.setup({
 	start_in_insert = true,
 	insert_mappings = true,
 	persist_size = true,
+  -- all these options of any plugin we can use something like this:
+  -- :Toggleterm direction=horizontal size=20 
+  -- and now we can bind this above command to some key
 	direction = "float",
 	close_on_exit = true,
 	shell = vim.o.shell,
@@ -41,6 +44,7 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 local Terminal = require("toggleterm.terminal").Terminal
 local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
 
+-- :lua _LAZYGIT_TOGGLE (open lazygit -> manage git)
 function _LAZYGIT_TOGGLE()
 	lazygit:toggle()
 end

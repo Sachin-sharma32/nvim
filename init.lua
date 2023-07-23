@@ -12,4 +12,6 @@ require "user.gitsigns"
 require "user.nvim-tree"
 require "user.bufferline"
 require "user.lualine"
+-- gd on "toggleterm" to open the toggleterm.lua file
 require "user.toggleterm"
+-- ctrl + \ -> open terminal 
