@@ -100,9 +100,9 @@ return packer.startup(function(use)
     -- refer to the configuration section below
   }
   }
-  use 'adelarsq/image_preview.nvim'
   use 'nvim-lua/popup.nvim'
   use 'nvim-telescope/telescope-media-files.nvim'
+  use {'edluffy/hologram.nvim'}
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

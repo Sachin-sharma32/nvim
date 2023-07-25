@@ -18,5 +18,4 @@ require "user.toggleterm"
 require "user.todo-comments"
 -- :ColorizerAttactToBuffer
 require "user.nvim-colorizer"
-require "user.image-preview"
-
+require "user.hologram"
