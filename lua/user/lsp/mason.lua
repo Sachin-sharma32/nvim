@@ -4,7 +4,8 @@ local servers = {
   "lua_ls",
 	"pyright",
 	"jsonls",
-  "tsserver"
+  "tsserver",
+  "tailwindcss"
 }
 
 local settings = {
