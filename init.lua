@@ -15,4 +15,8 @@ require "user.lualine"
 -- gd on "toggleterm" to open the toggleterm.lua file
 require "user.toggleterm"
 -- ctrl + \ -> open terminal 
-require "user.better-comment"
+require "user.todo-comments"
+-- :ColorizerAttactToBuffer
+require "user.nvim-colorizer"
+require "user.image-preview"
+

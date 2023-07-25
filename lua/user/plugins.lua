@@ -89,8 +89,20 @@ return packer.startup(function(use)
   use "lewis6991/gitsigns.nvim"
 
   use "folke/tokyonight.nvim"
-  use "Djancyp/better-comments.nvim"
-
+  use 'norcalli/nvim-colorizer.lua'
+  use "nvim-lua/plenary.nvim"
+  use {
+  "folke/todo-comments.nvim",
+  dependencies = { "nvim-lua/plenary.nvim" },
+  opts = {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  }
+  }
+  use 'adelarsq/image_preview.nvim'
+  use 'nvim-lua/popup.nvim'
+  use 'nvim-telescope/telescope-media-files.nvim'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
