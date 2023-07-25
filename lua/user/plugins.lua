@@ -105,6 +105,11 @@ return packer.startup(function(use)
   use 'nvim-lua/popup.nvim'
   use 'nvim-telescope/telescope-media-files.nvim'
   use {'edluffy/hologram.nvim'}
+  use {
+   'barrett-ruth/live-server.nvim',
+    build = 'yarn global && live-server',
+    config=true
+  }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

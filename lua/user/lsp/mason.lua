@@ -5,7 +5,9 @@ local servers = {
 	"pyright",
 	"jsonls",
   "tsserver",
-  "tailwindcss"
+  "tailwindcss",
+  "clangd",
+  "clang-format"
 }
 
 local settings = {
