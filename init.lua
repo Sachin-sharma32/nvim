@@ -15,3 +15,4 @@ require "user.lualine"
 -- gd on "toggleterm" to open the toggleterm.lua file
 require "user.toggleterm"
 -- ctrl + \ -> open terminal 
+require "user.better-comment"
