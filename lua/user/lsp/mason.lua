@@ -1,5 +1,3 @@
-
-
 local servers = {
   "lua_ls",
 	"pyright",
@@ -7,7 +5,6 @@ local servers = {
   "tsserver",
   "tailwindcss",
   "clangd",
-  "clang-format"
 }
 
 local settings = {
