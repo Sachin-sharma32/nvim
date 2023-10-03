@@ -6,7 +6,7 @@ local term_opts = { silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
+keymap("", "<C>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -30,6 +30,31 @@ keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+
+-- vim 
+-- Define a function to handle the keymap
+local function saveWithFilename()
+    -- Prompt the user for a filename
+    local filename = vim.fn.input('Enter a filename: ')
+
+    -- Check if the user provided a filename
+    if filename ~= '' then
+        -- Construct the save command with the provided filename
+        local save_command = ':sav ' .. filename
+
+        -- Execute the save command
+        vim.cmd(save_command)
+    else
+        -- If the user didn't provide a filename, show an error message
+        vim.cmd('echo "No filename provided."')
+    end
+end
+
+-- Define the keymap to call the function
+vim.api.nvim_set_keymap('n', '<C-S-s>', '<Cmd>lua saveWithFilename()<CR>', { noremap = true, silent = true })
+
+
+
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
